@@ -196,6 +196,85 @@ h1 {
   font-style: italic;
 }
 
+/* Callout Styles */
+.callout {
+  border-left: none !important;
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  margin: 1em 0;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.callout::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.callout-note {
+  background: #e3f2fd;
+  border: 1px solid #2196f3;
+}
+
+.callout-note::before {
+  background: #2196f3;
+}
+
+.callout-tip {
+  background: #e8f5e8;
+  border: 1px solid #4caf50;
+}
+
+.callout-tip::before {
+  background: #4caf50;
+}
+
+.callout-important {
+  background: #fff3e0;
+  border: 1px solid #ff9800;
+}
+
+.callout-important::before {
+  background: #ff9800;
+}
+
+.callout-warning {
+  background: #fff3e0;
+  border: 1px solid #ff9800;
+}
+
+.callout-warning::before {
+  background: #ff9800;
+}
+
+.callout-caution {
+  background: #ffebee;
+  border: 1px solid #f44336;
+}
+
+.callout-caution::before {
+  background: #f44336;
+}
+
+.callout p:first-child {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-style: normal;
+}
+
+.callout p:first-child::before {
+  content: attr(data-type);
+  text-transform: uppercase;
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-right: 0.5em;
+}
+
 .panel img {
   max-width: 100%;
   height: auto;
