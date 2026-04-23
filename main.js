@@ -1,5 +1,5 @@
 const pages = [
-  { name: 'bear', title: '🐻 Bear Trap' }
+  { name: 'bear', title: '🐻 Bear Trap' },
   // Add more pages here as objects: { name: 'filename', title: 'Display Title' }
 ];
 
