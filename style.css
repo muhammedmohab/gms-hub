@@ -46,6 +46,35 @@ body {
   font-style: italic;
 }
 
+.scrolling-ribbon {
+  overflow: hidden;
+  background: linear-gradient(45deg, #8b4513, #d2691e);
+  color: white;
+  padding: 8px 0;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.ribbon-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+  font-weight: bold;
+  font-size: 1em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .translate-widget {
   margin-top: 15px;
   text-align: center;
