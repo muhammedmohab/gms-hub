@@ -5,7 +5,8 @@ const pages = [
   { name: 'swordland-showdown', title: '⚔️ Swordland Showdown' },
   { name: 'vikings-vengeance', title: '🛡️ Vikings Vengeance' },
   { name: 'island-guide', title: '🏝️ Island Guide' },
-  { name: 'merchant-empire', title: '🏪 Merchant Empire' }
+  { name: 'merchant-empire', title: '🏪 Merchant Empire' },
+  { name: 'hall-of-governers', title: '🏆 Hall of Governors' }
   // Add more pages here as objects: { name: 'filename', title: 'Display Title' }
 ];
 
