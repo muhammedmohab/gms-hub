@@ -22,6 +22,62 @@ body {
   padding: 20px;
 }
 
+/* Tab System Styles */
+.tab-bar {
+  background: #d2691e;
+  border-bottom: 3px solid #8b4513;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.tab-button {
+  background: #a0522d;
+  border: 2px solid #8b4513;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.tab-button:hover {
+  background: #8b4513;
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: #d2691e;
+  border-bottom: 3px solid #d2691e;
+  color: white;
+  font-weight: 600;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-panel {
+  display: none;
+  width: 100%;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.nav {
+  margin: 20px 0;
+}
+
 .header {
   background: linear-gradient(135deg, #d2691e 0%, #a0522d 100%);
   color: white;
