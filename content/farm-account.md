@@ -13,24 +13,22 @@ A farm account is essentially a second account in the same kingdom/alliance that
 
 ## Creating Your Farm Account
 
-### Step 1: Download the Game on Another Device
-- Use a second phone, tablet, or emulator
-- Or create a new profile/user on your existing device
-- The game supports multiple accounts on the same device through different profiles
+### Create a New In-Game Account
+The game supports multiple accounts on the same device! Here's how to set up your farm:
 
-### Step 2: Create a New Account
-1. Launch the game on your new device/profile
-2. Complete the tutorial (takes 5-10 minutes)
-3. Choose your kingdom carefully - **must be the same kingdom as your main account**
-4. Pick a name for your farm account (e.g., "MainName-Farm")
+1. Open the game settings/menu
+2. Look for "Switch Account" or "Create New Account" option
+3. Complete the tutorial (takes 5-10 minutes)
+4. Choose your kingdom carefully - **must be the same kingdom as your main account**
+5. Pick a clear name for your farm account (e.g., "MainName-Farm" or "MainName-F1")
 
-### Step 3: Join Your Alliance
-> [!TIP]
-> Make sure your farm account joins the same alliance as your main account so you can coordinate sharing and raids.
+### Quick Switch Between Accounts
+> [!NOTE]
+> You can quickly swap between your farm and main account on the same device. Most players keep both accounts installed for instant access during events.
 
-1. Find your alliance in the search menu
-2. Send a join request
-3. Have your R4/R5 approve it quickly
+- Use the account switcher in your game settings
+- Switch during events to maximize your raids and opportunities
+- Takes only seconds to change accounts
 
 ---
 
@@ -71,7 +69,7 @@ This is where farm accounts shine! 🌟
 
 **How It Works:**
 1. Your **farm account** finds or refreshes to a high-value caravan
-2. **Share** that caravan location to your alliance in the event tab
+2. **Share** that caravan location to yourself
 3. Your **main account** raids it immediately
 4. Your **farm account** raids the same caravan again
 
@@ -152,44 +150,7 @@ This is where farm accounts shine! 🌟
 
 ---
 
-## Advanced Farm Account Tactics
-
-### The Guaranteed Mythic Share
-> [!IMPORTANT]
-> This is the most powerful farm account tactic for Merchant Empire.
-
-1. Use farm account gems (if needed) to refresh caravans
-2. Get the guaranteed mythic after 6 refreshes
-3. Check the loot - if exceptional (Artisan Visions, rare materials):
-   - **Share immediately** to your main account
-   - Main account raids for guaranteed mythic-level loot
-4. Farm account gets second raid as well
-5. Result: Main account gets TWO high-quality raids from one caravan
-
-### Controlled Speed Advantage
-- Farm account completes caravan routes faster (simpler build focus)
-- Reports completion times to main
-- Main can time raids accordingly for better timing
-
-### Assist Farming
-> [!NOTE]
-> Each account gets one daily assist use. Use both for critical high-tier caravans.
-
-- Farm account assists mythic caravans on main account
-- Main account assists high-value caravans for farm account
-- Double the assist bonuses on your best finds
-
----
-
 ## Important Rules & Etiquette
-
-### Account Linking & Security
-> [!CAUTION]
-> Link both accounts to the same email or backup system. If you lose access, you lose your farming advantage!
-
-- Use a secure password manager
-- Link accounts to same Google/Apple ID if possible
-- Enable two-factor authentication
 
 ### Alliance Considerations
 - **Communicate**: Let leadership know you have a farm account
@@ -233,7 +194,7 @@ This is where farm accounts shine! 🌟
 
 To maximize your farm account's value:
 
-$$\text{Farm Value} = \text{(Participation)} + \text{(Event Opportunities)} + \text{(Resource Generation)}$$
+Farm Value = Participation + Event Opportunities + Resource Generation
 
 **Where:**
 - **Participation** = Being present for events and raids
@@ -274,19 +235,6 @@ $$\text{Farm Value} = \text{(Participation)} + \text{(Event Opportunities)} + \t
 
 **Solution**: Keep farm account modest level, move it around, or maintain defensive troops.
 
----
-
-## Pro Tips from Top Players
-
-> [!TIP]
-> **The "Refresh Reset" Strategy**: If your farm account's guaranteed mythic at 6 refreshes is poor, some players refresh again to try for another (costs more but sometimes worth it for game events).
-
-> [!TIP]
-> **The "Timing Window" Tactic**: Have your farm actively searching 1-2 hours into caravan refreshes. Most high-value caravans appear after the initial rush.
-
-> [!TIP]
-> **The "Assist Combo" Play**: Save both farm and main assists for the exact same caravan, then raid it together. The cumulative bonus can be huge.
-
 > [!TIP]
 > **The "Level Lock"**: Keep farm at level 18-22 indefinitely. You get all event participation but avoid most pvp complications.
 
@@ -302,7 +250,6 @@ $$\text{Farm Value} = \text{(Participation)} + \text{(Event Opportunities)} + \t
 - Your main account is level 20+
 
 ### ⚠️ Consider Alternatives If:
-- You only have one device (plays can still work but more tedious)
 - You're in a casual alliance
 - You prefer simplicity over optimization
 - You don't enjoy managing multiple accounts
@@ -334,5 +281,5 @@ Farm accounts are one of the most effective strategies for serious players looki
 
 **Start small, stay organized, and watch your rewards multiply!** 🌾💰
 
-Good luck out there, commander! May your farm be prosperous and your raids bountiful! 🏆
+> Good luck out there, commander! May your farm be prosperous and your raids bountiful! 🏆
 
