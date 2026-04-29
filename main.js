@@ -228,7 +228,7 @@ async function loadRibbon() {
     const text = await res.text();
     const ribbonText = document.querySelector('.ribbon-text');
     if (ribbonText) {
-      ribbonText.textContent = ' • ' + text.trim('//') + ' • ';
+      ribbonText.textContent = ' • ' + text.split('\n').filter(line => line.trim()).join(' • ') + ' • ';
     }
   } catch (error) {
     console.log('Ribbon text not found, using default');
