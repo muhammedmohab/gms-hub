@@ -1,191 +1,145 @@
 # 🍪 Grandma's House Alliance Hub
 
-> **Making game guides accessible, readable, and beautiful for everyone.**
+> **A cozy web hub for gaming guides, notices, and alliance strategy.**
 
-A simple yet powerful web application designed to help gaming communities organize and share strategies, guides, and event information in an easy-to-read format. Perfect for alliance leaders, content creators, and communities who want to make their knowledge accessible to all players—regardless of language.
+A lightweight community portal built to organize game guides, alliance notices, and strategy tips in a clean, user-friendly format.
 
-## 📖 Why This Project Exists
+## 📖 What This Project Does
 
-In gaming communities, sharing knowledge can be chaotic. Discord threads get buried, guides get lost, and important strategies become hard to find. We created **Grandma's House Alliance Hub** to solve this problem.
+This site is designed for gaming communities who want a polished home for their content without a complex backend.
 
-This project provides:
+Key benefits:
 
-- ✨ **Clean, Organized Interface** - No clutter, everything you need in one place
-- 📄 **Easy Content Management** - Just add Markdown files, no complex setup required
-- 🌍 **Built-in Translation** - Google Translate integration so everyone can read in their preferred language
-- 📱 **Fully Responsive** - Works perfectly on mobile, tablet, and desktop
-- 🎨 **Beautiful Styling** - A comfortable, welcoming design inspired by a grandmother's cozy kitchen
-- 🚀 **Lightning Fast** - Lightweight and quick to load
+- ✨ **Clean UI** for guides and notices
+- 📄 **Markdown-based content** for easy editing
+- 🌍 **Google Translate** built in for global accessibility
+- 📱 **Responsive design** with mobile drawer navigation
+- 🚀 **Modular JavaScript** for easier maintenance
+- 🎮 **Discord quick-link** for community access
 
-Whether you're managing an alliance or just want to share gaming tips with friends, this hub makes it simple.
+## 🎯 Core Features
 
-## 🎯 Features
+- **Responsive tab navigation** for desktop users
+- **Mobile drawer menu** for smaller screens
+- **Accordion guide navigation** for expandable content
+- **Markdown content loading** from `content/*.md`
+- **Live notices panel** using markdown notice files
+- **Google Translate widget** for client-side translation
 
-### Accordion Navigation
-Click any button to expand/collapse game guides and strategies. Only one section at a time to keep things clean and organized.
-
-### Multi-Language Support
-Thanks to Google Translate, players worldwide can read your content in their native language. No language barriers, just gaming knowledge.
-
-### Image Support
-Add screenshots, diagrams, and images to your guides. They're automatically styled with rounded corners, shadows, and smooth hover effects.
-
-### Responsive Design
-Perfect on any device. Mobile players get a clean, readable experience just like desktop users.
-
-### Discord Integration
-Direct link to your Discord community right in the header, making it easy for players to join and discuss strategies.
-
-### Dynamic Navigation
-Add new guides by simply:
-1. Creating a `.md` file in the `content/` folder
-2. Adding an entry to the `pages` array in `main.js`
-
-That's it! No rebuilding, no complex config files.
-
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Installation
 
-1. **Clone this repository**
+1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/gms-hub.git
    cd gms-hub
    ```
 
-2. **Open in your browser**
-   - Simply open `index.html` in your web browser
-   - Or serve with a local server:
-     ```bash
-     python -m http.server 8000
-     # Then visit http://localhost:8000
-     ```
+2. Open `index.html` in your browser or use a local server:
+   ```bash
+   python -m http.server 8000
+   # Visit http://localhost:8000
+   ```
 
-### Adding New Content
+### Project Structure
 
-1. **Create a new Markdown file** in the `content/` folder
+```
+gms-hub/
+├── index.html            # Main HTML page
+├── main.js               # App entry point / module loader
+├── js/
+│   ├── tab-manager.js    # Tab and drawer navigation logic
+│   ├── notice-loader.js  # Notice markdown loader
+│   ├── guide-manager.js  # Guide accordion loader
+│   ├── ribbon-loader.js  # Ribbon text loader
+│   └── utils.js          # Shared helpers
+├── style.css             # Site styling and responsive rules
+├── README.md             # Project documentation
+├── ribbon.txt            # Scrolling ribbon content
+└── content/              # Markdown guides and notices
+    ├── bear.md
+    ├── notices.md
+    └── ...
+```
+
+## 📝 Add New Guides
+
+1. Create a new markdown file in `content/`:
    ```bash
    content/your-guide.md
    ```
 
-2. **Write your guide** in Markdown format
-   ```markdown
-   # Your Guide Title
-   
-   Your content here...
-   
-   ![Image Alt](image-url.jpg)
-   ```
-
-3. **Add to navigation** in `main.js`
+2. Add the guide to the `pages` array in `main.js`:
    ```javascript
    const pages = [
      { name: 'bear', title: '🐻 Bear Trap' },
-     { name: 'your-guide', title: '📖 Your Guide Title' }  // Add this line
+     { name: 'your-guide', title: '📖 Your Guide Title' }
    ];
    ```
 
-4. **Refresh your browser** - Your new guide is live!
+3. Reload the page to see the new guide.
 
-## 📁 Project Structure
+## 🛠️ Customize the Site
 
-```
-gms-hub/
-├── index.html          # Main HTML file
-├── main.js             # JavaScript logic & page configuration
-├── style.css           # All styling (desktop & mobile responsive)
-├── README.md           # This file
-└── content/
-    ├── bear.md         # Example game strategy
-    └── your-guide.md   # Add your guides here
-```
+### Update the mobile drawer menu
+The mobile drawer menu is generated automatically from the same tab list in `main.js`. Add or remove tabs there to update both desktop and mobile navigation.
 
-## 🛠️ Customization
+### Change colors
+Edit `style.css` to update the visual theme.
 
-### Change the Theme
-Edit the color variables in `style.css`:
-- `#d2691e` - Primary color (brown)
-- `#f5e6d3` - Background color (cream)
-- `#4b2e2e` - Text color (dark brown)
-
-### Modify the Discord Link
-In `index.html`, find the Discord button and update the URL:
+### Change the Discord link
+Update the button in `index.html`:
 ```html
-<a href="https://your-discord-link.gg" target="_blank" class="discord-button">🎮 Join Our Discord</a>
+<a href="https://discord.gg/YOUR_LINK" target="_blank" class="discord-button">🎮 Join Our Discord</a>
 ```
 
-### Change the Title
-Update both the browser tab and header text in `index.html`:
-```html
-<title>Your Title 🍪</title>
-<h1>🍪 Your Hub Name</h1>
-```
+## 💡 Development Notes
 
-## 🌐 Deploy to GitHub Pages
+### Modular JS architecture
+The app uses a modular JavaScript structure:
 
-Make your hub live for free using GitHub Pages:
+- `main.js` initializes the page and loads modules
+- `js/tab-manager.js` handles tabs and drawer menu state
+- `js/notice-loader.js` loads content from notice markdown files
+- `js/guide-manager.js` builds accordion guide navigation
+- `js/ribbon-loader.js` loads the scrolling ribbon message
+- `js/utils.js` provides shared helper functions
 
-1. **Push to GitHub**
+### Mobile experience
+On mobile, the top tab bar is hidden and replaced by a hamburger drawer menu for easy navigation.
+
+## 🌐 Deploying
+
+Use GitHub Pages or any static hosting provider:
+
+1. Push your changes to GitHub:
    ```bash
    git push origin main
    ```
 
-2. **Enable GitHub Pages**
-   - Go to Settings → Pages
-   - Set source to `main` branch
-   - Your hub will be live at `https://yourusername.github.io/gms-hub`
+2. Enable GitHub Pages in the repository settings.
 
-## 💡 Best Practices
+## 💬 Contributing
 
-### Content Tips
-- **Keep guides focused** - One topic per guide
-- **Use headings** - Structure your content with H2 and H3 headings
-- **Add visuals** - Screenshots and diagrams improve understanding
-- **Be conversational** - Guides are easier to follow when friendly and relaxed
+Contributions are welcome!
 
-### Navigation Tips
-- **Use emojis** - Makes buttons visually distinct and fun (🐻 🔥 💡 etc.)
-- **Keep titles short** - Works better on mobile devices
-- **Logical order** - Put foundational guides first
+- Add new guides
+- Improve styling
+- Expand mobile behavior
+- Fix bugs or improve docs
 
-### File Naming
-- Use lowercase letters
-- Use hyphens instead of spaces: `my-guide.md` ✅ not `my guide.md` ❌
+### Contribution workflow
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/my-change`
+3. Commit your work
+4. Push the branch
+5. Open a pull request
 
-## 🤝 Contributing
+## 📜 License
 
-We welcome contributions! Whether it's:
-- New guides or strategies
-- Bug fixes
-- Design improvements
-- Translation suggestions
-- Documentation improvements
-
-**To contribute:**
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-guide`)
-3. Commit your changes (`git commit -m 'Add amazing guide'`)
-4. Push to the branch (`git push origin feature/amazing-guide`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - feel free to use it for your gaming community!
-
-## 🎮 Used By
-
-- Gaming Alliances
-- Knowledge Bases
-
-## 📞 Support
-
-Have questions or need help? 
-- 🐛 Found a bug? Open an issue
-- 💬 Have a suggestion? Let's discuss it
-- 🤔 Need help? Check existing issues or documentation
+MIT License
 
 ---
 
-**Made with ❤️ for the gaming community**
-
-*"Grandma's House Alliance Hub - Where Kingshot's game knowledge lives, and everyone's welcome."*
+**Made for gaming communities who want a warm, simple place to store their best strategies.**
