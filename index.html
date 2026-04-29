@@ -20,6 +20,15 @@
       </div>
       <div id="google_translate_element" class="translate-widget"></div>
     </div>
+    <button class="drawer-toggle" aria-label="Open menu" aria-expanded="false">☰ Menu</button>
+    <div class="drawer-backdrop" hidden></div>
+    <aside class="drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <span>Menu</span>
+        <button class="drawer-close" aria-label="Close menu">×</button>
+      </div>
+      <div class="drawer-items"></div>
+    </aside>
     <div class="tab-bar"></div>
   </header>
 
@@ -39,7 +48,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="main.js"></script>
+  <script type="module" src="main.js"></script>
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
