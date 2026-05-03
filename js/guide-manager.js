@@ -42,6 +42,8 @@ export class GuideManager {
       const text = await response.text();
       let html = marked.parse(text);
       html = processCallouts(html);
+      const disclaimer = '<div class="disclaimer"><strong>Disclaimer:</strong> This guide has been created by experienced players from GMS leadership. It represents their conclusions and is not intended to be the definitive or only way to play.</div>';
+      html = disclaimer + html;
       panel.innerHTML = html;
     } catch (error) {
       console.error('Error loading guide page:', error);
