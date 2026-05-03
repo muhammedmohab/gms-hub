@@ -60,7 +60,7 @@ To make your cookies stronger, improve:
 > [!TIP]
 > Only your FIRST hero matters (the one with the green flag)
 
-![Bear rally joiner heros](https://ibb.co/0RytwL9k)
+![Bear rally joiner heros](https://i.ibb.co/pBjymTKg/Screenshot-bear-heros.jpg)
 
 > [!CAUTION]
 > If you don’t have a proper hero → send NO heroes
