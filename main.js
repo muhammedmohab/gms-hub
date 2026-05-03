@@ -3,8 +3,7 @@ import { RibbonLoader } from './js/ribbon-loader.js';
 
 const tabs = [
   { id: 'notices', name: '📢 Alliance Notices', type: 'notices', file: 'notices' },
-  { id: 'guides', name: '📚 Guides', type: 'guides' },
-  { id: 'giftcodes', name: '🎁 Gift Codes', type: 'giftcodes' }
+  { id: 'guides', name: '📚 Guides', type: 'guides' }
   // Add more tabs here: { id: 'events', name: '🎉 Events', type: 'notices', file: 'events' }
 ];
 
