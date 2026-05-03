@@ -5,7 +5,6 @@ Welcome dear, today we conquer the Mystic Trials! 🏰✨
 ## Optimum Troop Ratios (Infantry/Cavalry/Archer)
 
 Each Mystic Trial location has different terrain that favors certain troop types. Use these ratios for maximum success!
-![All Mystic Tirals](https://lblog.fp.guinfra.com/file/6955175c1d5848683154ee0dusBSXBiX03)
 
 ### Coliseum - 50/10/40
 - **Best for**: Balanced combat with archer advantage
