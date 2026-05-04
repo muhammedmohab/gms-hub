@@ -17,9 +17,9 @@ const pages = [
   { name: 'merchant-empire', title: '🏪 Merchant Empire' },
   { name: 'farm-account', title: '🌾 Farm Account' },
   { name: 'hall-of-governers', title: '🏆 Hall of Governors' },
-  { name: 'kvk', title: '🏰 KvK / SvS' }
   { name: 'kvk', title: '🏰 KvK / SvS' },
   { name: 'shop', title: '🛒 Shop' },
+  { name: 'pets', title: '🐾 Pets' }
   // Add more pages here as objects: { name: 'filename', title: 'Display Title' }
 ];
 
