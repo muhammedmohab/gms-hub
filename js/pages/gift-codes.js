@@ -3,7 +3,7 @@ async function loadGiftCodes() {
   const listContainer = document.getElementById('giftcodes-list');
 
   try {
-    const response = await fetch("/.netlify/functions/giftcodes");
+    const response = await fetch("https://gms-hub.netlify.app/.netlify/functions/gift-codes");
 
     const data = await response.json();
     listContainer.innerHTML = '';
