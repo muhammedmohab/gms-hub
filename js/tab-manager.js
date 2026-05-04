@@ -1,5 +1,6 @@
 import { NoticeLoader } from './notice-loader.js';
 import { GuideManager } from './guide-manager.js';
+import { loadGiftCodes } from './pages/gift-codes.js';
 
 export class TabManager {
   constructor(tabs, pages) {
@@ -38,10 +39,8 @@ export class TabManager {
         this.noticeLoader.loadNotices(tab.file, panel);
       } else if (tab.type === 'html' && tab.file) {
         this.loadHTMLPage(tab.file, panel);
-      } else if (tab.type === 'giftcodes') {
-        this.loadGiftCodes(panel);
-      } else if (tab.type === 'kingdomAge') {
-        this.loadKingdomAge(panel);
+      } else {
+        panel.innerHTML = '<div style="padding: 30px; text-align: center;"><p style="font-size: 1.2em; color: #8b4513;">Content coming soon!</p></div>';
       }
 
       this.tabContent.appendChild(panel);
@@ -94,12 +93,24 @@ export class TabManager {
 
   async loadHTMLPage(file, panel) {
     try {
-      const response = await fetch(file);
+      const response = await fetch(`./pages/${file}.html`);
       const html = await response.text();
       panel.innerHTML = html;
+      await this.loadJavaScriptPage(file);
     } catch (error) {
       console.error('Error loading HTML page:', error);
       panel.innerHTML = '<div style="padding: 30px; text-align: center;"><p style="font-size: 1.2em; color: #8b4513;">Error loading page</p></div>';
+    }
+  }
+
+  async loadJavaScriptPage(file) {
+    try {
+      if (file === 'gift-codes') {
+        await loadGiftCodes();
+      }
+      // Add more cases here for other JavaScript-based pages if needed
+    } catch (error) {
+      console.error('Error loading JavaScript page:', error);
     }
   }
 
@@ -138,130 +149,4 @@ export class TabManager {
     document.body.classList.remove('drawer-open');
   }
 
-  async loadGiftCodes(panel) {
-    panel.innerHTML = `
-      <div style="padding: 20px; max-width: 800px; margin: 0 auto;">
-        <h2 style="color: #8b4513; text-align: center;">🎁 Available Gift Codes</h2>
-        <p style="text-align: center; margin-bottom: 20px;">Click the copy button next to any gift code to copy it to your clipboard!</p>
-        <div id="giftcodes-list" style="background: #fff8f0; padding: 20px; border-radius: 12px; border: 2px solid #d2691e;">
-          <div style="text-align: center; padding: 20px;">
-            <div class="loading-spinner" style="display: inline-block; width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #d2691e; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-            <p style="margin-top: 10px; color: #8b4513;">Loading gift codes...</p>
-          </div>
-        </div>
-      </div>
-      <style>
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        .gift-code-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background: #f5e6d3;
-          padding: 10px 15px;
-          margin-bottom: 10px;
-          border-radius: 8px;
-          border: 1px solid #d2691e;
-        }
-        .gift-code-text {
-          font-family: monospace;
-          font-size: 16px;
-          font-weight: bold;
-          color: #4b2e2e;
-        }
-        .copy-btn {
-          background: #d2691e;
-          color: white;
-          border: none;
-          padding: 8px 12px;
-          border-radius: 6px;
-          cursor: pointer;
-          font-size: 14px;
-          transition: background 0.2s;
-        }
-        .copy-btn:hover {
-          background: #b8571f;
-        }
-        .copy-btn.copied {
-          background: #28a745;
-        }
-        .gift-code-details {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          min-width: 0;
-          gap: 6px;
-        }
-        .gift-code-meta {
-          font-size: 0.9em;
-          color: #8b4513;
-          margin-top: 4px;
-        }
-      </style>
-    `;
-
-    try {
-      const response = await fetch('https://kingshot.net/api/gift-codes');
-      if (!response.ok) {
-        throw new Error('Failed to fetch gift codes');
-      }
-      const data = await response.json();
-      const listContainer = panel.querySelector('#giftcodes-list');
-      const codes = data?.data?.giftCodes || [];
-
-      if (codes.length > 0) {
-        listContainer.innerHTML = codes
-          .map((item) => `
-            <div class="gift-code-item">
-              <div class="gift-code-details">
-                <div class="gift-code-text">${item.code}</div>
-                <div class="gift-code-meta">Expires: ${item.expiresAt ? new Date(item.expiresAt).toLocaleDateString() : 'Never'}</div>
-              </div>
-              <button type="button" class="copy-btn" data-code="${item.code}">Copy</button>
-            </div>
-          `)
-          .join('');
-
-        listContainer.querySelectorAll('.copy-btn').forEach((button) => {
-          button.addEventListener('click', () => {
-            const code = button.dataset.code;
-            copyToClipboard(code, button);
-          });
-        });
-      } else {
-        listContainer.innerHTML = '<p style="text-align: center; color: #8b4513;">No gift codes available at the moment.</p>';
-      }
-    } catch (error) {
-      console.error('Error loading gift codes:', error);
-      const listContainer = panel.querySelector('#giftcodes-list');
-      listContainer.innerHTML = '<p style="text-align: center; color: #ef0006;">Failed to load gift codes. Please try again later.</p>';
-    }
-
-    const copyToClipboard = (text, btn) => {
-      navigator.clipboard.writeText(text).then(() => {
-        btn.textContent = 'Copied!';
-        btn.classList.add('copied');
-        setTimeout(() => {
-          btn.textContent = 'Copy';
-          btn.classList.remove('copied');
-        }, 2000);
-      }).catch((err) => {
-        console.error('Failed to copy: ', err);
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        btn.textContent = 'Copied!';
-        btn.classList.add('copied');
-        setTimeout(() => {
-          btn.textContent = 'Copy';
-          btn.classList.remove('copied');
-        }, 2000);
-      });
-    };
-  }
 }

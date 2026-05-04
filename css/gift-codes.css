@@ -1,0 +1,93 @@
+.giftcodes-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.giftcodes-title {
+  color: #8b4513;
+  text-align: center;
+}
+
+.giftcodes-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.giftcodes-list {
+  background: #fff8f0;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #d2691e;
+}
+
+.giftcodes-loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.giftcodes-loading p {
+  margin-top: 10px;
+  color: #8b4513;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #d2691e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.gift-code-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5e6d3;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #d2691e;
+}
+
+.gift-code-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gift-code-text {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4b2e2e;
+}
+
+.gift-code-meta {
+  font-size: 0.9em;
+  color: #8b4513;
+}
+
+.copy-btn {
+  background: #d2691e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #b8571f;
+}
+
+.copy-btn.copied {
+  background: #28a745;
+}
