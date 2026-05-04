@@ -3,9 +3,10 @@ async function loadGiftCodes() {
   const listContainer = document.getElementById('giftcodes-list');
 
   const url = "https://kingshot.net/api/gift-codes";
+  const proxy = "https://corsproxy.io/?url=";
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(proxy + url);
 
     const data = await response.json();
     listContainer.innerHTML = '';
