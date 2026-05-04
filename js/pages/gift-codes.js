@@ -7,7 +7,7 @@ async function loadGiftCodes() {
 
     const data = await response.json();
     listContainer.innerHTML = '';
-    const codes = data?.data?.giftCodes || [];
+    const codes = data?.data?.data?.giftCodes || [];
     if (codes.length > 0) {
       listContainer.innerHTML = codes
         .map((item) => `
