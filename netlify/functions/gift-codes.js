@@ -10,7 +10,7 @@ exports.handler = async function () {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json"
       },
-      body: data ? JSON.stringify({ data }) : JSON.stringify({ data: { giftCodes: [] } })
+      body: data
     };
 
   } catch (error) {
