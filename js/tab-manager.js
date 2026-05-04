@@ -1,5 +1,6 @@
 import { NoticeLoader } from './notice-loader.js';
 import { GuideManager } from './guide-manager.js';
+import { loadGiftCodes } from './pages/gift-codes.js';
 
 export class TabManager {
   constructor(tabs, pages) {
@@ -38,6 +39,8 @@ export class TabManager {
         this.noticeLoader.loadNotices(tab.file, panel);
       } else if (tab.type === 'html' && tab.file) {
         this.loadHTMLPage(tab.file, panel);
+      } else {
+        panel.innerHTML = '<div style="padding: 30px; text-align: center;"><p style="font-size: 1.2em; color: #8b4513;">Content coming soon!</p></div>';
       }
 
       this.tabContent.appendChild(panel);
@@ -90,12 +93,24 @@ export class TabManager {
 
   async loadHTMLPage(file, panel) {
     try {
-      const response = await fetch(file);
+      const response = await fetch(`./pages/${file}.html`);
       const html = await response.text();
       panel.innerHTML = html;
+      await this.loadJavaScriptPage(file);
     } catch (error) {
       console.error('Error loading HTML page:', error);
       panel.innerHTML = '<div style="padding: 30px; text-align: center;"><p style="font-size: 1.2em; color: #8b4513;">Error loading page</p></div>';
+    }
+  }
+
+  async loadJavaScriptPage(file) {
+    try {
+      if (file === 'gift-codes') {
+        await loadGiftCodes();
+      }
+      // Add more cases here for other JavaScript-based pages if needed
+    } catch (error) {
+      console.error('Error loading JavaScript page:', error);
     }
   }
 
