@@ -20,7 +20,8 @@ const pages = [
   { name: 'hall-of-governers', title: '🏆 Hall of Governors' },
   { name: 'kvk', title: '🏰 KvK / SvS' },
   { name: 'shop', title: '🛒 Shop' },
-  { name: 'pets', title: '🐾 Pets' }
+  { name: 'pets', title: '🐾 Pets' },
+  { name: 'fishing', title: '🎣 Fishing' }
   // Add more pages here as objects: { name: 'filename', title: 'Display Title' }
 ];
 
