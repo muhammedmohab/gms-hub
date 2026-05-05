@@ -38,7 +38,7 @@ Upgrade these using fishing points:
 3. **Sinker** → Faster start  
 
 > [!TIP]
-> Line + Hook first = biggest boost :contentReference[oaicite:0]{index=0}
+> Line + Hook first = biggest boost
 
 ---
 
@@ -50,7 +50,7 @@ Upgrade these using fishing points:
 - Stay on sides (left/right)  
 - Go as deep as possible  
 
-👉 Max depth ≈ 550m = best rewards :contentReference[oaicite:1]{index=1}  
+👉 Max depth ≈ 550m = best rewards
 
 ---
 
@@ -65,7 +65,7 @@ Now we collect 😏
 4. 🐟 Normal fish  
 
 > [!TIP]
-> Don’t grab everything → your hook has limited space :contentReference[oaicite:2]{index=2}
+> Don’t grab everything → your hook has limited space
 
 ---
 
@@ -75,7 +75,7 @@ Now we collect 😏
 - 🔦 Lantern → see deep areas  
 - 📡 Ocean Scanner → find rare fish  
 
-👉 These give HUGE advantage if used correctly :contentReference[oaicite:3]{index=3}  
+👉 These give HUGE advantage if used correctly
 
 ---
 
@@ -86,7 +86,7 @@ Before normal fishing:
 - Use **special map / boost**
 - First cast = MAX gear + more rewards  
 
-👉 This gives you massive early points boost :contentReference[oaicite:4]{index=4}  
+👉 This gives you massive early points boost
 
 ---
 
@@ -124,7 +124,7 @@ If run is bad:
 
 # ⏱ Attempts & Timing
 
-- New attempt every ~3 hours :contentReference[oaicite:5]{index=5}  
+- New attempt every ~3 hours
 - Don’t let attempts sit full (waste)  
 
 ---
@@ -137,7 +137,7 @@ If run is bad:
   - Gear upgrades  
   - Event rewards  
 
-- Unused tokens → converted to resources later :contentReference[oaicite:6]{index=6}  
+- Unused tokens → converted to resources later
 
 ---
 
