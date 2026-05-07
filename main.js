@@ -21,7 +21,8 @@ const pages = [
   { name: 'kvk', title: '🏰 KvK / SvS' },
   { name: 'shop', title: '🛒 Shop' },
   { name: 'pets', title: '🐾 Pets' },
-  { name: 'fishing', title: '🎣 Fishing' }
+  { name: 'fishing', title: '🎣 Fishing' },
+  { name: 'champagne-fair', title: '🍾 Champagne Fair' },
   // Add more pages here as objects: { name: 'filename', title: 'Display Title' }
 ];
 
