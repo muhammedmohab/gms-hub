@@ -106,12 +106,23 @@ export class TabManager {
   async loadJavaScriptPage(file) {
     try {
       if (file === 'gift-codes') {
+        await this.loadScript(`./js/pages/${file}.js`);
         await loadGiftCodes();
       }
       // Add more cases here for other JavaScript-based pages if needed
     } catch (error) {
       console.error('Error loading JavaScript page:', error);
     }
+  }
+
+  async loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
   }
 
   switchTab(tabId, button) {
